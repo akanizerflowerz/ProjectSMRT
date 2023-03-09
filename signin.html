@@ -1,31 +1,53 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <link rel="icon" href="./images/1x/logo_icon.png">
-        <title>ProjectSMRT</title>
-        <meta charset="UTF-8">
-        <link rel="stylesheet" type="text/css" href="css/styles.css">
-    </head>
-    <body>
-        <header>
-            <nav class="navbar">
-                <a href="index.html">
-                    <img src="./images/1x/logo.png" alt="logo">
-               </a>
-                <ul class="nav-list">
-                    <li class="nav-item">
-                        <a href="index.html"> <span class="souligner"> ACCEUIL</span></a>
-                    </li>
-                    <li class="nav-item">
-                        <a href=""> <span class="souligner"> SMRT</span></a>
-                    </li>
-                    <li class="nav-item">
-                        <a href=""> <span class="souligner"> QUIZZ</span></a>
-                    </li>
 
-                </ul> 
-            </nav>
-        </header> 
-          
-    </body>
+<head>
+    <link rel="icon" href="./images/1x/logo_icon.png">
+    <title>ProjectSMRT</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
+</head>
+
+<body>
+    <header>
+        <nav class="navbar">
+            <a href="index.html">
+                <img src="./images/1x/logo.png" alt="logo">
+            </a>
+            <ul class="nav-list">
+                <li class="nav-item">
+                    <a href="index.html"> <span class="souligner"> ACCEUIL</span></a>
+                </li>
+                <li class="nav-item">
+                    <a href=""> <span class="souligner"> SMRT</span></a>
+                </li>
+                <li class="nav-item">
+                    <a href=""> <span class="souligner"> QUIZZ</span></a>
+                </li>
+
+            </ul>
+        </nav>
+    </header>
+
+    <div id="form">
+        <h1>Inscription</h1>
+
+        <form action="envoyer.php" method="post">
+            <label for="nom">Nom</label>
+            <input type="text" id="nom" name="nom" required>
+
+            <label for="prenom">Prenom</label>
+            <input type="text" id="prenom" name="prenom" required>
+
+            <label for="email">E-mail</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="age">Age</label>
+            <input type="date" id="age" name="age" required>
+
+            <input type="submit" value="Envoyer" class="button">
+        </form>
+    </div>
+</body>
+
 </html>

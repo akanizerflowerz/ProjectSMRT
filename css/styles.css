@@ -59,7 +59,7 @@ body{
 }
 #main-container{
     display: flex;
-
+    text-align: justify;
 }
 #left-container{
     margin: 20px;
@@ -86,7 +86,7 @@ body{
 #left-container a{
     margin-top: 35px ;
 }
-#singup_btn{
+.button{
     background-color: #17162E;
     color: #fff;
     border: none;
@@ -98,12 +98,42 @@ body{
     transition: all 0.3s ease-in-out;
     margin-bottom: 15px;
 }
-#singup_btn:hover{
+.button:hover{
     transform: scale(1.05);
 }
-#singup_btn:active{
+.button:active{
     transform: scale(0.95);
     transform: rotate(1turn);
 }
 
+/*form*/ 
 
+form {
+    display: flex;
+    flex-direction: column;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+label {
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+input, textarea {
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid;
+    border-radius: 5px;
+}
+
+#form h1 {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin: 20px 0;
+}
+
+input[type="submit"] {
+    margin-top: 30px;
+}

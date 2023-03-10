@@ -78,7 +78,7 @@ body{
     margin-left: 18px;
     margin-top: 10px ;
 }
-#right-container{
+/*#right-container{
     background-image: url("back_blur.png");
     padding: auto;
     margin: 20px;
@@ -87,7 +87,8 @@ body{
     border-radius: 20px;
     display: flex;
     align-items: center;
-}
+}*/
+/*
 #right-container div{
     margin: auto;
     background-color: rgba(245, 245, 245, 0.5);
@@ -97,9 +98,74 @@ body{
     flex-direction: column;
     align-items: center;
     gap: 25px;
+}*/
+#acces {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    margin-top: 25%;
+    z-index: 1;
+}
+#acces a {
+    margin: 0 auto;
+    margin-top: 10px;
+}
+#acces h1 {
+    margin: 0 auto;
+    text-align: center;
+}
+#right-container {
+    position: relative;
+    width: 50%;
+    height: auto;
+    margin: 20px;
+    border-radius: 20px;
+    background-color: whitesmoke;
 }
 #left-container a{
     margin-top: 35px ;
+}
+.slider {
+    height: 100%;
+    overflow: hidden;
+    border-radius: 20px;
+}
+.slides {
+    width: calc(971.5px * 3);
+    animation: glisses 10s infinite;
+}
+.slide img {
+    width: 971.5px;
+    height: 550px;
+    float: left;
+    filter: opacity(70%);
+}
+@keyframes glisses {
+    0% {
+        transform: translateX(0);
+    }
+    20% {
+        transform: translateX(0);
+    }
+    33% {
+        transform: translateX(-971.5px);
+    }
+    53% {
+        transform: translateX(-971.5px);
+    }
+    66% {
+        transform: translateX(-1943px);
+    }
+    86% {
+        transform: translateX(-1943px);
+    }
+    100% {
+        transform: translateX(0px);
+    }
 }
 .button{
     background-color: #17162E;

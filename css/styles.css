@@ -78,10 +78,25 @@ body{
     margin-left: 18px;
     margin-top: 10px ;
 }
-#right-container img{ 
-    height: 500px;
+#right-container{
+    background-image: url("back_blur.png");
+    padding: auto;
     margin: 20px;
+    padding-left: 10%;
+    padding-right: 10%;
     border-radius: 20px;
+    display: flex;
+    align-items: center;
+}
+#right-container div{
+    margin: auto;
+    background-color: rgba(245, 245, 245, 0.5);
+    border-radius: 20px;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 25px;
 }
 #left-container a{
     margin-top: 35px ;

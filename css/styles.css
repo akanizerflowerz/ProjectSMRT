@@ -26,6 +26,7 @@ header img{
     flex-direction: row;
     gap: 100px;
     margin-left: 70px;
+    flex-grow: 2;
 }
 .nav-item{
     list-style: none;
@@ -53,6 +54,12 @@ header img{
 .souligner:hover::before {
     visibility: visible;
     transform: scaleX(1);
+}
+.account{
+    padding-left: 20px;
+}
+.account img{
+    height: 45px;
 }
 body{
     background-color: white;

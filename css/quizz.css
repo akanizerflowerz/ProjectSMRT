@@ -1,0 +1,30 @@
+#main-quizz-container{
+    display: flex;
+    text-align: justify;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+#quizz-container{
+    margin: 20px;
+    padding: 10px;
+    border-radius: 20px;
+    background-color: whitesmoke;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 75px 10px 75px;
+    transition: all 0.3s ease-in-out;
+}
+#quizz-container img{
+    width: 50%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+#quizz-container p{
+    font-weight: 600;
+}
+
+#quizz-container:hover{
+transform: scale(1.05);
+}

@@ -4,12 +4,12 @@
     flex-wrap: wrap;
     display: flex;
     justify-content: center;
-    margin-top: 50px;
+    margin-top: 75px;
 }
 #sign-in{
     margin: 20px;
     border-radius: 20px;
-    background-color: whitesmoke;
+    background-color: lime;
     padding: 20px 75px 10px 75px;
     width: 400px;
 
@@ -17,7 +17,7 @@
 #sign-up{
     margin: 20px;
     border-radius: 20px;
-    background-color: whitesmoke;
+    background-color: lime;
     padding: 20px 75px 10px 75px;
     width: 400px;
 
@@ -46,5 +46,4 @@ input, textarea {
 
 input[type="submit"] {
     margin-top: 30px;
-
 }

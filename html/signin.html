@@ -2,11 +2,12 @@
 <html>
 
 <head>
-    <link rel="icon" href="./images/1x/logo_icon.png">
+    <link rel="icon" href="../images/1x/logo_icon.png">
     <title>ProjectSMRT</title>
     <meta charset="UTF-8">
     <link rel="stylesheet" type="text/css" href="../css/styles.css">
     <link rel="stylesheet" type="text/css" href="../css/header.css">
+    <link rel="stylesheet" href="../css/sign-in-up.css">
 </head>
 
 <body>
@@ -29,26 +30,42 @@
             </ul>
         </nav>
     </header>
+    <div class="main-container">
+        <div id="sign-in" >
+            <form action="envoyer.php" method="post">
+                <label for="nom">Nom</label>
+                <input type="text" id="nom" name="nom" required>
 
-    <div id="form">
-        <h1>Inscription</h1>
+                <label for="prenom">Prenom</label>
+                <input type="text" id="prenom" name="prenom" required>
 
-        <form action="envoyer.php" method="post">
-            <label for="nom">Nom</label>
-            <input type="text" id="nom" name="nom" required>
+                <label for="email">E-mail</label>
+                <input type="email" id="email" name="email" required>
 
-            <label for="prenom">Prenom</label>
-            <input type="text" id="prenom" name="prenom" required>
+                <label for="age">Age</label>
+                <input type="date" id="age" name="age" required>
 
-            <label for="email">E-mail</label>
-            <input type="email" id="email" name="email" required>
+                <input type="submit" value="Envoyer" class="button">
+            </form>
+         </div>
+         <div id="sign-up">
+            <form action="envoyer.php" method="post">
+                <label for="nom">Nom</label>
+                <input type="text" id="nom" name="nom" required>
 
-            <label for="age">Age</label>
-            <input type="date" id="age" name="age" required>
+                <label for="prenom">Prenom</label>
+                <input type="text" id="prenom" name="prenom" required>
 
-            <input type="submit" value="Envoyer" class="button">
-        </form>
-    </div>
+                <label for="email">E-mail</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="age">Age</label>
+                <input type="date" id="age" name="age" required>
+
+                <input type="submit" value="Envoyer" class="button">
+            </form>
+         </div>
+</div>
 </body>
 
 </html>

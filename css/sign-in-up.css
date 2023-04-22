@@ -1,0 +1,23 @@
+.main-container{
+    background-color:whitesmoke;
+    border-radius: 20px;
+    text-align: justify;
+    flex-wrap: wrap;
+
+}
+sign-in{
+    margin: 20px;
+    border-radius: 20px;
+    background-color: whitesmoke;
+
+    padding: 20px 75px 10px 75px;
+    transition: all 0.3s ease-in-out;
+}
+sign-up{
+    margin: 20px;
+    border-radius: 20px;
+    background-color: whitesmoke;
+
+    padding: 20px 75px 10px 75px;
+    transition: all 0.3s ease-in-out;
+}

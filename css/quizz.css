@@ -3,6 +3,7 @@
     text-align: justify;
     flex-wrap: wrap;
     justify-content: center;
+    padding-top: 50px;
 }
 
 #quizz-container{
@@ -13,16 +14,22 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 20px 75px 10px 75px;
+    padding: 50px 75px 10px 75px;
     transition: all 0.3s ease-in-out;
+    width: 250px;
+    height: 250px;
+    gap: 15px;
 }
 #quizz-container img{
-    width: 50%;
-    margin-top: 20px;
-    margin-bottom: 20px;
+    width: 80px;
+    margin-top: 15px;
+    margin-bottom: 15px;
 }
 #quizz-container p{
     font-weight: 600;
+}
+#quizz-container a{
+    padding-bottom: auto;
 }
 
 #quizz-container:hover{

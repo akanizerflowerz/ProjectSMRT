@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1
--- Généré le : mar. 02 mai 2023 à 16:20
+-- Généré le : mer. 03 mai 2023 à 21:14
 -- Version du serveur : 10.4.27-MariaDB
 -- Version de PHP : 8.2.0
 
@@ -246,10 +246,8 @@ INSERT INTO `repanse` (`id_repanse`, `id_question`, `la_repanse`, `point_repanse
 
 CREATE TABLE `utilisateur` (
   `id_utilisateur` int(10) UNSIGNED NOT NULL,
-  `nom_utilisateur` varchar(50) NOT NULL,
   `prenom_utilisateur` varchar(50) NOT NULL,
   `email` varchar(50) NOT NULL,
-  `date_naiss` varchar(10) NOT NULL,
   `password` varchar(15) NOT NULL,
   `niveau` int(10) UNSIGNED NOT NULL,
   `date_creation` date NOT NULL

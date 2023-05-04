@@ -1,10 +1,14 @@
 <?php 
-        
-    try 
-    {
-        $bdd=new PDO('mysql:host=localhost;dbname=bd_smrt;charset=utf8','root',);
-    }
-    catch(PDOException $e)
-    {
-        die('Erreur : '.$e->getMessage());
-    }
+$servername = "localhost";
+$username = "root";
+$password = "";
+$dbname = "bd_smrt";
+
+// Create connection
+$conn = mysqli_connect($servername, $username, $password, $dbname);
+
+// Check connection
+if (!$conn) {
+    die("Connection failed: " . mysqli_connect_error());
+}
+?>

@@ -12,6 +12,7 @@
     <h2>Votre Inscription Ces Bien De Derouler ,IL NE RESTE PLUS QU'A SE CONNECETR !!</h2>
 
 	<?php
+		session_start();
 		if ($_SERVER["REQUEST_METHOD"] == "POST") {
 			require_once 'bd.php';
 
@@ -24,7 +25,8 @@
 			$result = $stmt->get_result();
 
 			if ($result->num_rows == 1) {
-				// L'utilisateur est connecté, rediriger vers la page de quizz
+				// L'utilisateur est connecté, initialiser la session et rediriger vers la page de quizz
+				$_SESSION['user'] = $email;
 				header('Location: ../html/quizz.html');
 				exit();
 			} else { 
@@ -51,3 +53,8 @@
     </div>
     </div>
     </div>
+    
+
+
+</body>
+</html>

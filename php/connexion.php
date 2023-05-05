@@ -14,7 +14,7 @@ if (isset($_POST['email']) && isset($_POST['pass'])) {
     if (mysqli_num_rows($result) == 1) {
         // l'utilisateur existe dans la base de données
         $_SESSION['email'] = $email;
-        header('Location: quizz.html');
+        header('Location: ../html/quizz.html');
     } else {
         // l'utilisateur n'existe pas dans la base de données
         $_SESSION['message'] = "Adresse e-mail ou mot de passe incorrect!";

@@ -13,7 +13,8 @@ if (isset($_POST['email']) && isset($_POST['pass'])) {
 
     if (mysqli_num_rows($result) == 1) {
         // l'utilisateur existe dans la base de données
-        $_SESSION['email'] = $email;
+        $row = mysqli_fetch_assoc($result);
+        $_SESSION['user'] = $row['id_utilisateur']; // définit $_SESSION['user'] comme l'ID de l'utilisateur
         header('Location: ../html/quizz.html');
     } else {
         // l'utilisateur n'existe pas dans la base de données

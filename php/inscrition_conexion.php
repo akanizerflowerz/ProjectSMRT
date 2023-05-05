@@ -24,8 +24,8 @@
 			$result = $stmt->get_result();
 
 			if ($result->num_rows == 1) {
-				// L'utilisateur est connecté, rediriger vers la page d'accueil
-				header('Location: index.php');
+				// L'utilisateur est connecté, rediriger vers la page de quizz
+				header('Location: ../html/quizz.html');
 				exit();
 			} else { 
 				echo "<p>Adresse email ou mot de passe incorrect.</p>";
@@ -51,8 +51,3 @@
     </div>
     </div>
     </div>
-    
-
-
-</body>
-</html>

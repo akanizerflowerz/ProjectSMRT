@@ -1,5 +1,5 @@
 <?php 
     session_start(); 
     session_destroy(); 
-    header('Location:chargementdeco.html'); 
+    header('Location:../html/index.html'); 
     die();

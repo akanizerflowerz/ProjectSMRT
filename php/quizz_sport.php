@@ -44,6 +44,7 @@ $req->store_result();
         </li>
 
     </ul>
+    <a href="signin.html" class="account"><img src="../images/account-logo-no-back.png" alt="Logo Account"></a>
 </nav>
 </header>
 <div id="main-quizz-container">
@@ -53,7 +54,7 @@ if ($req->num_rows > 0) {
     $req->bind_result($id_quizz, $nom_quizz, $catégorie);
     while ($req->fetch()) {
         // Affichage des informations du quiz
-        echo '<h2><a href="quiz.php?id='.$id_quizz.'">'.$nom_quizz.'</a></h2>';
+        echo '<h2 style="row flex"><a href="quiz.php?id='.$id_quizz.'">'.$nom_quizz.'</a></h2>' ;
     }
 }
 $req->close();
@@ -62,9 +63,3 @@ $req->close();
 </div>
 </body>
 </html>
-
-
-
-
-
-

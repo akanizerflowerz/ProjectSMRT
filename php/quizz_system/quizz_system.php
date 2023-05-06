@@ -1,19 +1,17 @@
 <?php
-// Connexion à la base de données
-$mysqli = new mysqli("localhost", "nom_utilisateur", "mot_de_passe", "nom_de_la_base_de_données");
-if ($mysqli -> connect_errno) {
-  echo "Échec de la connexion à la base de données : " . $mysqli -> connect_error;
-  exit();
-}
+session_start();
+require_once '../bd.php'; 
 // Requête SQL pour récupérer les questions et les réponses
-$sql = "SELECT id, question, reponse1, reponse2, reponse3, reponse_correcte FROM questions ORDER BY RAND() LIMIT 10";
+$sql = "SELECT  ". $id_quizz." ,id_question, la_question, la_repanse , point_repanse
+ FROM question NATURAL JOIN repanse
+ ORDER BY RAND() LIMIT 10";
 
 // Exécution de la requête SQL
-$resultat = $mysqli->query($sql);
+$resultat = $conn->query($sql);
 // Boucle pour afficher les questions et les réponses
 while ($row = $resultat->fetch_assoc()) {
   echo "<h2>" . $row['question'] . "</h2>";
-  echo "<input type='radio' name='reponse_" . $row['id'] . "' value='1'>" . $row['reponse1'] . "<br>";
+  echo "<input type='radio' name='reponse_" . $row['id'] . "' value='1'>" . $row['la_repanse'] . "<br>";
   echo "<input type='radio' name='reponse_" . $row['id'] . "' value='2'>" . $row['reponse2'] . "<br>";
   echo "<input type='radio' name='reponse_" . $row['id'] . "' value='3'>" . $row['reponse3'] . "<br>";
   echo "<input type='hidden' name='reponse_correcte_" . $row['id'] . "' value='" . $row['reponse_correcte'] . "'>";

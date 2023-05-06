@@ -7,14 +7,14 @@ if(!isset($_SESSION['user'])){
 }
 
 // Requête SQL pour sélectionner les quiz de la catégorie sport
-$req = $conn->prepare('SELECT * FROM quizz WHERE catégorie = "MATHEMATIQUE"');
+$req = $conn->prepare('SELECT * FROM quizz WHERE catégorie = "NATURE ET ANIMEAUX"');
 $req->execute();
 
 
 $req->store_result();
 ?>
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -25,27 +25,9 @@ $req->store_result();
     <link rel="stylesheet" href="../css/sign-in-up.css">
     <link rel="stylesheet" href="../css/quizz.css">
 </head>
-<body>
-<header>
-<nav class="navbar">
-    <a href="../html/index.html">
-        <img src="../images/1x/logo.png" alt="logo">
-    </a>
-    <ul class="nav-list">
-        <li class="nav-item">
-            <a href="../html/index.html"> <span class="souligner"> ACCEUIL</span></a>
-        </li>
-        <li class="nav-item">
-            <a href="../html/smrt.html"> <span class="souligner"> SMRT</span></a>
-        </li>
-        <li class="nav-item">
-            <a href="../html/quizz.html"> <span class="souligner"> QUIZZ</span></a>
-        </li>
-
-    </ul>
-    <a href="../php/profile.php" class="account"><img src="../images/account-logo-no-back.png" alt="Logo Account"></a>
-</nav>
-</header>
+<?php
+include_once 'includes/header.php';
+?>
 <div id="main-quizz-container">
 <?php
 if ($req->num_rows > 0) {
@@ -54,7 +36,7 @@ if ($req->num_rows > 0) {
         // Affichage des informations du quiz
         echo ' 
         <div id="quizz-container2">
-            <a href="quiz.php?id='.$id_quizz.'"> <button class="button">'.$nom_quizz.'</button></a>
+            <a href="pages_quizz/'.$id_quizz.'.php"> <button class="button">'.$nom_quizz.'</button></a>
         </div>
         ';
     }

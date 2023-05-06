@@ -149,6 +149,8 @@ INSERT INTO `quizz` (`id_quizz`, `nom_quizz`, `catégorie`) VALUES
 (3, 'Français', 'LANGUE ET CULTURE'),
 (4, 'Tennis', 'SPORT'),
 (5, 'Problèmes de Maths', 'MATHEMATIQUE');
+(6, 'Moteurs', 'VOITURE');
+(7, 'Histoire', 'INFORMATIQUE');
 
 -- --------------------------------------------------------
 

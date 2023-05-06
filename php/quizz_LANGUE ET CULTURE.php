@@ -41,7 +41,7 @@ $req->store_result();
         </li>
 
     </ul>
-    <a href="signin.html" class="account"><img src="../images/account-logo-no-back.png" alt="Logo Account"></a>
+    <a href="../php/profile.php" class="account"><img src="../images/account-logo-no-back.png" alt="Logo Account"></a>
 </nav>
 </header>
 <div id="main-quizz-container">

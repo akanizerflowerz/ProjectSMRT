@@ -39,8 +39,10 @@ if(isset($_SESSION['user'])){
                         max-width: 600px;
                         margin: 0 auto;
                         padding: 20px;
-                        background-color: #fff;
+                        background-color: whitesmoke;
+                        border-radius: 20px; 
                         border: 1px solid #ddd;
+                        margin-top: 50px;
                     }
                     h1 {
                         margin-top: 0;
@@ -81,7 +83,7 @@ if(isset($_SESSION['user'])){
                     <p><strong>Adresse e-mail:</strong> $email</p>
                     <p><strong>Niveau:</strong> $niveau</p>
                     <form action='../php/deconnexion.php' method='POST'>
-                        <button type='submit'>Déconnexion</button>
+                        <button class='button-long' type='submit'>Déconnexion</button>
                     </form>
                 </div>
             </body>

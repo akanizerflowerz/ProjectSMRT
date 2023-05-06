@@ -145,10 +145,10 @@ CREATE TABLE `quizz` (
 
 INSERT INTO `quizz` (`id_quizz`, `nom_quizz`, `catégorie`) VALUES
 (1, 'Coupe du monde', 'SPORT'),
-(2, 'Animaeaux de la ferm', 'NATURE ET ANIMEAUX'),
-(3, 'Françai', 'LANGUE ET CULTURE'),
+(2, 'Animeaux de la ferme', 'NATURE ET ANIMEAUX'),
+(3, 'Français', 'LANGUE ET CULTURE'),
 (4, 'Tennis', 'SPORT'),
-(5, 'Problèmes de Maths F', 'MATHEMATIQUE');
+(5, 'Problèmes de Maths', 'MATHEMATIQUE');
 
 -- --------------------------------------------------------
 

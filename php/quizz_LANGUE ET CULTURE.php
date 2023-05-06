@@ -22,22 +22,23 @@ $req->store_result();
     <link rel="stylesheet" type="text/css" href="../css/styles.css">
     <link rel="stylesheet" type="text/css" href="../css/header.css">
     <link rel="stylesheet" href="../css/sign-in-up.css">
+    <link rel="stylesheet" href="../css/quizz.css">
 </head>
 <body>
 <header>
 <nav class="navbar">
-    <a href="index.html">
+    <a href="../html/index.html">
         <img src="../images/1x/logo.png" alt="logo">
     </a>
     <ul class="nav-list">
         <li class="nav-item">
-            <a href="index.html"> <span class="souligner"> ACCEUIL</span></a>
+            <a href="../html/index.html"> <span class="souligner"> ACCEUIL</span></a>
         </li>
         <li class="nav-item">
-            <a href="smrt.html"> <span class="souligner"> SMRT</span></a>
+            <a href="../html/smrt.html"> <span class="souligner"> SMRT</span></a>
         </li>
         <li class="nav-item">
-            <a href="quizz.html"> <span class="souligner"> QUIZZ</span></a>
+            <a href="../html/quizz.html"> <span class="souligner"> QUIZZ</span></a>
         </li>
 
     </ul>
@@ -45,13 +46,16 @@ $req->store_result();
 </nav>
 </header>
 <div id="main-quizz-container">
-            <div id="quizz-container">
 <?php
 if ($req->num_rows > 0) {
     $req->bind_result($id_quizz, $nom_quizz, $catégorie);
     while ($req->fetch()) {
         // Affichage des informations du quiz
-        echo '<h2><a href="quiz.php?id='.$id_quizz.'">'.$nom_quizz.'</a></h2>';
+        echo '
+        <div id="quizz-container2">
+            <a href="quiz.php?id='.$id_quizz.'"> <button class="button">'.$nom_quizz.'</button></a>
+        </div>
+        ';
     }
 }
 $req->close();

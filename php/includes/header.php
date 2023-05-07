@@ -18,7 +18,7 @@ echo'
                     <a href="../../html/quizz.html"> <span class="souligner"> QUIZZ</span></a>
                 </li>
             </ul> 
-            <a href="../profile.php" class="account"><img src="../../images/account-logo-no-back.png" alt="Logo Account"></a>
+            <a href="profile.php" class="account"><img src="../../images/account-logo-no-back.png" alt="Logo Account"></a>
         </nav> 
     </header>
     ';

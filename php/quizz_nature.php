@@ -24,7 +24,7 @@ if ($req->num_rows > 0) {
         // Affichage des informations du quiz
         echo ' 
         <div id="quizz-container2">
-            <a href="pages_quizz/'.$id_quizz.'.php"> <button class="button">'.$nom_quizz.'</button></a>
+            <a href="quiz.php?id='.$id_quizz.'"> <button class="button">'.$nom_quizz.'</button></a>
         </div>
         ';
     }

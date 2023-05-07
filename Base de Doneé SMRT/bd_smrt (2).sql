@@ -433,7 +433,8 @@ CREATE TABLE `utilisateur` (
 --
 
 INSERT INTO `utilisateur` (`id_utilisateur`, `prenom_utilisateur`, `email`, `password`, `niveau`, `date_creation`) VALUES
-(2, 'hicham', 'hicham.s2003@gmail.com', '12345', 1, '0000-00-00');
+(2, 'hicham', 'hicham.s2003@gmail.com', '12345', 1, '0000-00-00'),
+(3, 'matthis', 'matthis.rsx@gmail.com', 'matthis_uwu', 1, '0000-00-00');
 
 --
 -- Index pour les tables déchargées

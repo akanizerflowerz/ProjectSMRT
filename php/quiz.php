@@ -64,10 +64,11 @@ while ($ligne = mysqli_fetch_assoc($req2)) {
     echo '<div id=" '.$ligne['id_question'].'"class="selector">';
     echo  '<h3>' . $ligne['la_question'] . '</h3>';
     $req3 = $conn->query('SELECT DISTINCT la_repanse, point_repanse, id_question , id_repanse FROM question NATURAL JOIN repanse WHERE id_question ='. $ligne['id_question'] );
-    echo '<form  action="quizz_system/quizz_system.php" methode="post">';
+    echo '<form  action="" methode="post">';
     echo '<div class="quizz-section">';
     while ($raw = mysqli_fetch_assoc($req3)){
-        echo "<label><input type='radio' value=" .$raw['id_repanse'] . " name=" .$raw['id_question'] .">"." ". $raw['la_repanse'] .  "</label> <br>" ;
+        
+        echo "<label><input type='radio' value=" .$raw['id_repanse'] . ' | '.$raw['id_question'] . ' name="formu" >'. $raw['la_repanse'] . "</label> <br>" ;
     }
     echo '</div>';
     echo '<input type="image"  src="../images/ok_icon.png" value="Send" class="button-valide" alt="Submit" >';
@@ -76,11 +77,13 @@ while ($ligne = mysqli_fetch_assoc($req2)) {
 
 }
 var_dump($_POST);
-$id_rep = $raw['id_repanse'];
-var_dump( $id_rep);
+
+list($value1,$value2) = explode('|', $_POST['formu']);
 ?>
 </div>
-    
+
+
+
 
 <?php
 mysqli_close($conn);

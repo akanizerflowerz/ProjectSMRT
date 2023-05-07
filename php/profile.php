@@ -60,7 +60,7 @@ if(isset($_SESSION['user'])){
             <body>
             <header>
                 <nav class='navbar'>
-                     <a href='index.html'>
+                     <a href='../html/index.html'>
                         <img src='../images/1x/logo.png' alt='logo'>
                     </a>
                     <ul class='nav-list'>
@@ -75,6 +75,7 @@ if(isset($_SESSION['user'])){
                             </li>
         
                     </ul>
+                    <a href='../php/profile.php' class='account'><img src='../images/account-logo-no-back.png' alt='Logo Account'></a>
                 </nav>
             </header>
                 <div class='container'>

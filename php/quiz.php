@@ -54,7 +54,9 @@ include_once 'includes/main.php';
         display: flex;
         flex-direction: row;
     }
-
+    .radio{
+        accent-color: #17162E;
+    }
 
 </style>
 <div id="main-ques-container">
@@ -68,7 +70,8 @@ while ($ligne = mysqli_fetch_assoc($req2)) {
     echo '<div class="quizz-section">';
     while ($raw = mysqli_fetch_assoc($req3)){
         
-        echo "<label><input type='radio' value='".$raw['id_repanse']."' name='reponse_question'>". $raw['la_repanse'] ."</label>";
+        echo "<label><input type='radio' class='radio' ' value='".$raw['id_repanse']."' name='reponse_question'> ". $raw['la_repanse'] ."</label>";
+
     }
     echo '</div>';
     echo '<input type="image"  src="../images/ok_icon.png" value="'. $ligne['id_question'] .'" class="button-valide" alt="Submit" >';

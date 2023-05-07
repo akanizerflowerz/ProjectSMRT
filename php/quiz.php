@@ -61,24 +61,23 @@ include_once 'includes/main.php';
 <?php
 $req2 = $conn->query('SELECT DISTINCT id_question, la_question FROM quizz NATURAL JOIN question NATURAL JOIN repanse WHERE id_quizz ='. $id );
 while ($ligne = mysqli_fetch_assoc($req2)) {
-    echo '<div id=" '.$ligne['id_question'].'"class="selector">';
+    echo '<div id="'.$ligne['id_question'].'"class="selector">';
     echo  '<h3>' . $ligne['la_question'] . '</h3>';
     $req3 = $conn->query('SELECT DISTINCT la_repanse, point_repanse, id_question , id_repanse FROM question NATURAL JOIN repanse WHERE id_question ='. $ligne['id_question'] );
-    echo '<form  action="" methode="post">';
+    echo '<form  action="quizz_system/quizz_system.php" method="post">';
     echo '<div class="quizz-section">';
     while ($raw = mysqli_fetch_assoc($req3)){
         
-        echo "<label><input type='radio' value=" .$raw['id_repanse'] . ' | '.$raw['id_question'] . ' name="formu" >'. $raw['la_repanse'] . "</label> <br>" ;
+        echo "<label><input type='radio' value='".$raw['id_repanse']."' name='reponse_question'>". $raw['la_repanse'] ."</label>";
     }
     echo '</div>';
-    echo '<input type="image"  src="../images/ok_icon.png" value="Send" class="button-valide" alt="Submit" >';
+    echo '<input type="image"  src="../images/ok_icon.png" value="'. $ligne['id_question'] .'" class="button-valide" alt="Submit" >';
     echo '</form>';
     echo '</div>';
 
 }
-var_dump($_POST);
 
-list($value1,$value2) = explode('|', $_POST['formu']);
+var_dump($_POST);
 ?>
 </div>
 
@@ -90,3 +89,4 @@ mysqli_close($conn);
 ?>
 
 </body>
+</html>

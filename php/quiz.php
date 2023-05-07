@@ -7,39 +7,83 @@ $id = $_GET['id'];
 require_once 'bd.php';
 include_once 'includes/main.php';
 ?>
-
+<body>
 <style>
-    #main-quizz-container{
-    display: flex;
-    text-align: justify;
-    flex-wrap: wrap;
-    justify-content: center;
-    padding-top: 50px;
-}
+    #main-ques-container{
+        margin-top: 40px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+    h3{
+        margin: 15px;
+    }
+    .quizz-section{ 
+        display: flex;
+        flex-direction: column;
+    }
+    .selector{
+        background-color: whitesmoke;
+        border-radius: 20px;
+        min-width: 520px;
+        max-width: 820px;
+        padding: 10px;  
+    }
+
+    .button-valide{
+        background-color: #17162E;
+        border: none;
+        border-radius: 25px;
+        padding: 5px 15px 5px 15px;
+        margin: auto;
+        transition: all 0.3s ease-in-out;
+        width: 40px;
+
+    }
+    .button-valide:hover{
+        transform: scale(1.05);
+    }
+    .button-valide:active{
+        transform: scale(0.95);
+        transform: rotate(1turn);
+    }
+    form{
+ 
+        margin-right: 20px;
+        display: flex;
+        flex-direction: row;
+    }
+
+
 </style>
+<div id="main-ques-container">
+<?php
+$req2 = $conn->query('SELECT DISTINCT id_question, la_question FROM quizz NATURAL JOIN question NATURAL JOIN repanse WHERE id_quizz ='. $id );
+while ($ligne = mysqli_fetch_assoc($req2)) {
+    echo '<div id=" '.$ligne['id_question'].'"class="selector">';
+    echo  '<h3>' . $ligne['la_question'] . '</h3>';
+    $req3 = $conn->query('SELECT DISTINCT la_repanse, point_repanse, id_question , id_repanse FROM question NATURAL JOIN repanse WHERE id_question ='. $ligne['id_question'] );
+    echo '<form  action="quizz_system/quizz_system.php" methode="post">';
+    echo '<div class="quizz-section">';
+    while ($raw = mysqli_fetch_assoc($req3)){
+        echo "<label><input type='radio' value=" .$raw['id_repanse'] . " name=" .$raw['id_question'] .">"." ". $raw['la_repanse'] .  "</label> <br>" ;
+    }
+    echo '</div>';
+    echo '<input type="image"  src="../images/ok_icon.png" value="Send" class="button-valide" alt="Submit" >';
+    echo '</form>';
+    echo '</div>';
+
+}
+var_dump($_POST);
+$id_rep = $raw['id_repanse'];
+var_dump( $id_rep);
+?>
+</div>
+    
 
 <?php
-$req = $conn->query('SELECT id_quizz, nom_quizz FROM quizz WHERE id_quizz ='. $id );
-if ($req->num_rows > 0) {
-    echo "Résultats trouvés : " . $req->num_rows;
-    echo "<select name='nom'>";
-    while ($row = $req->fetch_assoc()) {
-        echo "<option value='" . $row['id_quizz'] . "'>" . $row['nom_quizz'] . "</option>";
-    }
-    echo "</select>";
-} else {
-    // Gestion de l'erreur de la requête SQL
-    echo 'Erreur de requête SQL : '.$conn->error;
-}
-
-$req2 = $conn->query('SELECT DISTINCT id_question, la_question FROM quizz NATURAL JOIN question NATURAL JOIN repanse WHERE id_quizz = 2' );
-
-
-while ($ligne = mysqli_fetch_assoc($req2)) {
-    echo '<div>';
-    echo  '<h3>' . $ligne['la_question'] . '</h3><br>';
-    echo '</div>';
-}
-
 mysqli_close($conn);
 ?>
+
+</body>

@@ -17,6 +17,7 @@ body{
     flex-direction: column;
 }
 .button{
+    text-decoration: none;
     background-color: #17162E;
     color: #fff;
     border: none;

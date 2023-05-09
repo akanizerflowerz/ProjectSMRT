@@ -20,6 +20,7 @@ if(isset($_SESSION['user'])){
         <html>
             <head>
                 <title>Informations de l'utilisateur</title>
+                <link rel='icon' href='../images/1x/logo_icon.png'>
                 <link rel='stylesheet' type='text/css' href='../css/styles.css'>
                 <link rel='stylesheet' type='text/css' href='../css/header.css'>
                 <link rel='stylesheet' href='../css/sign-in-up.css'>

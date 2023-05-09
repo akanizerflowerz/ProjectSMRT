@@ -6,7 +6,7 @@
     padding-top: 50px;
 }
 
-#quizz-container{
+.quizz-container{
     margin: 20px;
     padding: 10px;
     border-radius: 20px;
@@ -20,24 +20,20 @@
     height: 250px;
     gap: 15px;
 }
-#quizz-container img{
+.quizz-container img{
     width: 80px;
     margin-top: 15px;
     margin-bottom: 15px;
 }
-#quizz-container p{
+.quizz-container p{
     font-weight: 600;
 }
-#quizz-container a{
-    padding-bottom: auto;
-}
 
-#quizz-container:hover{
+.quizz-container:hover{
 transform: scale(1.05);
 }
 
-
-#quizz-container2{
+.quizz-container2{
     margin: 20px;
     padding: 10px;
     border-radius: 20px;
@@ -50,7 +46,7 @@ transform: scale(1.05);
     gap: 15px;
 }
 
-#quizz-container2:hover{
+.quizz-container2:hover{
 transform: scale(1.05);
 }
 
